@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Items In Map</string>
+    <string name="title_activity_filter">Settings</string>
+    <string name="pref_a_key">a</string>
+    <string name="pref_b_key">b</string>
+    <string name="pref_c_key">c</string>
+    <string name="empty_map">The map is empty. Set the required attributes in Сlarify</string>
+    <string name="setting">Clarify</string>
+    <string name="key">dd3c95a8-1893-421a-b395-0efad71e8f36</string>
+    <string name="service">Service</string>
+
+
+</resources>

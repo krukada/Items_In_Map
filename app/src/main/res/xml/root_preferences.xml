@@ -1,0 +1,25 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Pins in map">
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:title="a"
+            app:key="@string/pref_a_key"
+            app:summary="@string/service"
+            />
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:title="b"
+            app:key="@string/pref_b_key"
+            app:summary="@string/service"
+            />
+        <CheckBoxPreference
+            app:defaultValue="false"
+            app:title="c"
+            app:key="@string/pref_c_key"
+            app:summary="@string/service"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
