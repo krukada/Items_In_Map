@@ -10,4 +10,10 @@ class Coordinates{
     fun getLng():Double{
         return lng
     }
+    fun setLat(lat: Double){
+        this.lat = lat
+    }
+    fun setLng(lng: Double){
+        this.lng = lng
+    }
 }

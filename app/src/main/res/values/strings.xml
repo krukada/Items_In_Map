@@ -8,6 +8,7 @@
     <string name="setting">Clarify</string>
     <string name="key">dd3c95a8-1893-421a-b395-0efad71e8f36</string>
     <string name="service">Service</string>
-
+    <string name="error">Unsuccessful Api registration, code: </string>
+    <string name="success">Success Api registration, code: </string>
 
 </resources>

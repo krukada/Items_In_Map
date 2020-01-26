@@ -5,8 +5,8 @@ class DataBase {
     @Entity(tableName = "coords")
     data class Coor(
         @PrimaryKey(autoGenerate = true) val uid: Int?,
-        @ColumnInfo(name = "lat") val lat: Double?,
-        @ColumnInfo(name = "lng") val lng: Double?
+        @ColumnInfo(name = "lat") val lat: Double,
+        @ColumnInfo(name = "lng") val lng: Double
     )
     @Dao
     interface UserDao {
@@ -19,7 +19,7 @@ class DataBase {
         @Query("DELETE FROM coords WHERE lat IN (:coorLat) AND lng IN (:coorLng)")
         fun delete(coorLat: Double, coorLng: Double)
     }
-    @Database(entities = arrayOf(Coor::class), version = 1, exportSchema = false)
+    @Database(entities = [Coor::class], version = 1, exportSchema = false)
     abstract class AppDatabase : RoomDatabase() {
         abstract fun userDao(): UserDao
     }

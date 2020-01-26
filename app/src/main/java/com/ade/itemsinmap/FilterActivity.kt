@@ -26,7 +26,7 @@ class FilterActivity : AppCompatActivity() {
 
         override fun onCreate(@Nullable savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity!!)
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity)
             sharedPreferences.registerOnSharedPreferenceChangeListener( this)
             addPreferencesFromResource(R.xml.root_preferences)
 
