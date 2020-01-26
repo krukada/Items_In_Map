@@ -106,7 +106,7 @@ class MapActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceCha
 
     fun convertJSONInObject(){
         val factory:ApiService.Factory = ApiService.Factory
-        //выполняем aсинхронно
+        //выполняем асинхронно
         factory.create().load().enqueue(this)
 
     }
