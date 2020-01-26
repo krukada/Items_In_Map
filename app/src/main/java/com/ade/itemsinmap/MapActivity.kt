@@ -24,9 +24,9 @@ import com.yandex.runtime.image.ImageProvider
 import kotlinx.coroutines.*
 import retrofit2.Call
 import retrofit2.Response
-import retrofit2.Callback as Callback1
+import retrofit2.Callback
 
-class MapActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener, Callback1<PinsInMap>{
+class MapActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferenceChangeListener, Callback<PinsInMap>{
     private lateinit var mapview: MapView
     private var mapObject:MapObjectCollection? = null
     private var animationHandler: Handler? = null
