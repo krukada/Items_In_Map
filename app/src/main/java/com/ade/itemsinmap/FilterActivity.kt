@@ -16,7 +16,8 @@ class FilterActivity : AppCompatActivity() {
             .beginTransaction()
             .replace(R.id.settings, SettingsFragment())
             .commit()
-      //  supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+      // supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     class SettingsFragment : PreferenceFragmentCompat() , SharedPreferences.OnSharedPreferenceChangeListener{

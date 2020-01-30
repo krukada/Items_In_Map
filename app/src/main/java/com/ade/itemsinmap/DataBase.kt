@@ -1,27 +1,31 @@
 package com.ade.itemsinmap
 import androidx.room.*
 
-class DataBase {
-    @Entity(tableName = "coords")
-    data class Coor(
-        @PrimaryKey(autoGenerate = true) val uid: Int?,
-        @ColumnInfo(name = "lat") val lat: Double,
-        @ColumnInfo(name = "lng") val lng: Double
-    )
-    @Dao
-    interface UserDao {
-        @Query("SELECT * FROM coords")
-        fun getAll(): List<Coor>
+@Entity(tableName = "items")
+data class Items(
+    @PrimaryKey(autoGenerate = false) val uid: Int,
+    @ColumnInfo(name = "service") val service: String,
+    @ColumnInfo(name = "lat") val lat: Double,
+    @ColumnInfo(name = "lng") val lng: Double,
+    @ColumnInfo(name = "visible") val visible:Boolean
 
-        @Insert(onConflict = OnConflictStrategy.REPLACE)
-        fun insert(vararg coor: Coor)
+)
+@Dao
+interface UserDao {
+    @Query("SELECT * FROM items")
+    fun getAll(): List<Items>
 
-        @Query("DELETE FROM coords WHERE lat IN (:coorLat) AND lng IN (:coorLng)")
-        fun delete(coorLat: Double, coorLng: Double)
-    }
-    @Database(entities = [Coor::class], version = 1, exportSchema = false)
-    abstract class AppDatabase : RoomDatabase() {
-        abstract fun userDao(): UserDao
-    }
+    @Query("SELECT * FROM items WHERE uid = (:id)")
+    fun getAllbyId(id: Int): Items
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(vararg items: Items)
+
+    @Query("UPDATE items set visible = (:visible) WHERE service = (:service)")
+    fun updateVisiblebyService(service: String, visible: Boolean)
+}
+
+@Database(entities = [Items::class], version = 3, exportSchema = false)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun userDao(): UserDao
 }
