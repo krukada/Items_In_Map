@@ -6,5 +6,10 @@
         app:showAsAction="never"
         android:title="@string/setting"
         />
+    <item
+        android:id="@+id/goToMap"
+        app:showAsAction="ifRoom"
+        android:title="GOtoMAP"
+        />
 
 </menu>

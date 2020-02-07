@@ -1,5 +1,4 @@
-package com.ade.itemsinmap
-
+package com.ade.itemsinmap.datasource.api
 import retrofit2.Call
 import retrofit2.http.GET
 

@@ -13,11 +13,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.AppCompat.DayNight">
-        <activity
-            android:name=".FilterActivity"
-            android:label="@string/title_activity_filter"></activity>
-        <activity android:name=".MapActivity">
+        <activity android:name=".mapView.Map">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
